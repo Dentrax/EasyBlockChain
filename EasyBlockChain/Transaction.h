@@ -15,6 +15,11 @@
 using namespace std;
 
 class CTXBase {
+public:
+	virtual void SetNull();
+
+	virtual bool IsNull() const;
+
 	virtual string ToString() const = 0;
 };
 
@@ -52,18 +57,78 @@ public:
 };
 
 class CTXOutput final : CTXBase {
+
+private:
 	Crypt::PublicKey m_key;
 	uint64_t m_amount;
+
+public:
+	CTXOutput() {
+		this->SetNull();
+	}
+
+	CTXOutput(Crypt::PublicKey key, uint64_t amount) {
+		this->m_key = key;
+		this->m_amount = amount;
+	}
+
+	bool operator==(const CTXOutput& other) const;
+
+	void SetNull();
+
+	bool IsNull() const;
+
+	Crypt::PublicKey GetKey() const;
+
+	uint64_t GetAmount() const;
+
+	string ToString() const;
 };
 
 class CTXPrefix {
+
+protected:
 	uint64_t m_time;
 	vector<CTXInput> m_inputs;
 	vector<CTXOutput> m_outputs;
 	vector<uint8_t> m_extras;
+
+public:
+
+	uint64_t GetTime() const;
+
+	vector<CTXInput> GetInputs() const;
+
+	vector<CTXOutput> GetOutputs() const;
+
+	vector<uint8_t> GetExtras() const;
+
 };
 
-class CTX final : public CTXPrefix {
+class CTransactionX final : public CTXPrefix {
+
+private:
+	int m_version;
+	int m_lockTime;
 	Crypt::PublicKey m_from;
 	Crypt::PublicKey m_to;
+
+public:
+	CTransactionX() {
+		this->SetNull();
+	}
+
+	bool operator==(const CTransactionX& other) const;
+
+	int GetVersion() const;
+
+	int GetLockTime() const;
+
+	void SetNull();
+
+	bool IsNull() const;
+
+	string ToString() const;
+
+
 };
