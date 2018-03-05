@@ -15,7 +15,7 @@
 using namespace std;
 
 class CTXBase {
-
+	virtual string ToString() const = 0;
 };
 
 class CTXInput final : CTXBase {
@@ -26,11 +26,29 @@ private:
 	vector<uint8_t> m_datas;
 
 public:
+	CTXInput() {
+		this->SetNull();
+	}
+
 	CTXInput(uint32_t index, uint64_t amount, vector<uint8_t> datas) {
 		this->m_index = index;
 		this->m_amount = amount;
 		this->m_datas = datas;
 	}
+
+	bool operator==(const CTXInput& other) const;
+
+	void SetNull();
+
+	bool IsNull() const;
+
+	uint32_t GetIndex() const;
+
+	uint64_t GetAmount() const;
+
+	vector<uint8_t> GetDatas() const;
+
+	string ToString() const;
 };
 
 class CTXOutput final : CTXBase {
