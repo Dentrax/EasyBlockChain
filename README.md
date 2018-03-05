@@ -1,6 +1,6 @@
 <h1 align="center">EasyBlockChain Public Source Repository</h1> EasyBlockChain
 
-**A cryptocurrency C++ implementation using a BlockChain technology made for `educational purposes only!`
+**A cryptocurrency C++ implementation using a BlockChain technology made for `educational-purposes-only!`**
 
 [What It Is](#what-it-is)
 
@@ -38,9 +38,9 @@ EasyBlockChain guide for C++ 14 language is an easy and best way to learn how bl
 
 ---
 
-* Warning : This project assumes you have some intermediate-level C++ knowledge, and `does not teach C++ itself.`
+* Warning : This project assumes you have some Intermediate-Level C++ knowledge, and `does not teach C++ itself.`
 
-* Warning : This project are not a "How to create your own cryptocurrency" or "How to design centralized/decentralized coin systems" and will not teach "Cryptocurrency trading/mining techniques"
+* Warning : This project are not a `How to create your own cryptocurrency` or `How to design centralized/decentralized coin systems` and will not teach `Cryptocurrency trading/mining techniques`
 
 ## How To Use
 
