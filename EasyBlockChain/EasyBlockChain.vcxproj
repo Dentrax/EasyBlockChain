@@ -122,6 +122,7 @@
     <ClInclude Include="BlockChain.h" />
     <ClInclude Include="Crypto.h" />
     <ClInclude Include="SHA256.h" />
+    <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
