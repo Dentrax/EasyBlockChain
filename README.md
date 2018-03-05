@@ -46,6 +46,14 @@ EasyBlockChain guide for C++ 14 language is an easy and best way to learn how bl
 
 ## How To Use
 
+* Class Names
+
+`SHA256` -> ---
+`Crypto` -> ---
+`CBlock` -> ---
+`CBlockChain` -> ---
+`CTransactionX` -> ---
+
 ---
 
 ## Requirements
