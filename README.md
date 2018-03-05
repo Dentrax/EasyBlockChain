@@ -1,5 +1,7 @@
 <h1 align="center">EasyBlockChain Public Source Repository</h1>
 
+**Warning: WORK-IN-PROGRESS Project**
+
 **A cryptocurrency C++ implementation using a BlockChain technology made for `EDUCATIONAL-PURPOSES-ONLY!`**
 
 [What It Is](#what-it-is)
